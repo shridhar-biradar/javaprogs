@@ -1,0 +1,32 @@
+1.how to check if git is available on your system?
+  By running the git--version command in a terminal(Linux,macOs)or windows
+
+2.how to initialize a new git repository?
+  * open terminal
+  * navigate to the root directory of your project
+  * initialize the local directory as a git repository.by default,the initial branch is called main
+  *add the files in your new local repository.this stages them for the first commit
+  *commit the files that you've staged in your local repository 
+  
+3.how to tell git about your name and email?
+   * Open the command line.
+   * Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+   * Set your email address: git config --global user.email "MY_NAME@example.com"
+
+4.how to add a file to the staging area?
+  * The "add" command marks changes to be included in the next commit.
+  * Specifies the files you want to add to the Staging Area.
+  * Adds all modifications to the Staging Area. 
+  * Adds all changes to existing files to the Staging Area.
+
+5.how to remove a file from the staging area?
+  To remove a file from the staging area, go to the Git desired directory,      create and stage a new text file. Then, view the repository's current status. After that, execute the “$ git           rm –cached <file-name>” command to remove the particular file. Finally, ensure the deleted file by checking the status.
+
+6.how to make a commit?
+  To add a Git commit message to your commit, you will use the git commit command followed by the -m flag and then your message in quotes . Adding a Git commit message should look something   like this: git commit -m “Add an anchor for the trial end sectionnn.”
+
+7.how to send your changes to a remote repository?
+  To push the commit from the local repo to your remote repositories, run git push -u remote-name branch-name where remote-name is the nickname the local repo uses for the remote repositories and branch-name is the name of the branch to push to the repository.
+
+8.what is the difference between clone and pull? 
+  git clone is how you get a local copy of an existing repository to work on. git pull (or git fetch + git merge ) is how you update that local copy with new commits from the remote repository

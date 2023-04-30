@@ -1,0 +1,40 @@
+1.What are the Conditional Operators in JAva
+  Logical ANd and Logical OR are conditional operators
+
+2.What are the types of operators based on the number of operands
+  There are two types of mathematical operators: unary and binary
+
+3.What is the use of Switch case in Java programing
+  The switch case in java is used to select one of many code blocks for execution .
+
+4.What are the priority levels of arithmetic operation in java
+  In postfix increment and decrement operators ++ -- have precedence from left to right
+  In prefix increment and decrement, and unary operators ++ -- + - ~ ! have precedence right to left
+  In multiplicative operators * / % have precedence left to right
+  In additive operators	+ - have precedence	left to right
+
+5.What are the conditional statements and use of conditional statement in Java
+  Java has the following conditional statements: Use if to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false. Use else if to specify a new condition to test, if the first condition is false
+
+6.what is the syntax of if else statement
+ If condition returns true then the statements inside the body of “if” are executed and the statements inside body of “else” are skipped
+
+7.what are the 3 types of iterative statements in java
+  For loop: Executes a set of statements a fixed number of times.
+  While loop: Repeats a set of statements while a given condition is true.
+  Do-while loop: Repeats a set of statements at least once and then continues to repeat as long as a given condition is true.
+
+8. Write the difference between for loop and do-while loop
+   The major difference between the for loop and the while loop is that the for loop is used when the number of iterations is known, whereas execution is done in the while loop until the statement in the program is proven wrong .
+
+9.Write a program to print numbers from 1 to 10
+public class For_Loop
+{
+    public static void main(String[] args)
+    {
+        for(int i = 1; i <= 10; i++)
+        {
+            System.out.println(i);
+        }
+    }
+}

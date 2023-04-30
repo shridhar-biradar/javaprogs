@@ -1,0 +1,28 @@
+1.What is statically typed and Dynamically typed Programing Language?
+  Dynamically-typed languages ​​perform type checking at runtime, while statically typed languages ​​perform type checking at compile time
+
+2.What is the variable in Java?
+  Variables are containers for storing data values . In Java, there are different types of variables, for example: String ,Integers
+
+3.How to Assign a value To variable?
+  The first time a variable is assigned a value, it is said to be initialised. The = symbol is known as the assignment operator . It is also possible to declare a variable and assign it a value in the same line, so instead of int i and then i = 9 we can write int i = 9
+
+4.What are Primitive Data types in Java?
+  Primitive data types - includes byte, short, int, long, float, double, boolean and char .
+
+5.what are the identifiers in java?
+  All Java variables must be identified with unique names . These unique names are called identifiers. Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+6.List the Operators in Java?
+ * Unary Operators.
+ * Arithmetic Operators.
+ * Assignment Operators.
+ * Logical Operators.
+ * Shift Operators.
+ * Bitwise Operators.
+ * Ternary Operators.
+ * Relational Operators.
+
+7.Explain about Increment and Decrement operators and give an examples
+ Suppose a and b are int variables and: a = 5; b = 10 + (++a); To execute the second statement, first the value of a is incremented to 6. Then, 10 is added to 6 to get 16, which is then assigned to b .
+ A decrement is a programming operator that decreases the numerical value of its operand by 1
