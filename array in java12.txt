@@ -1,0 +1,70 @@
+1.what do you mean by an array
+An array is a fundamental data structure used in programming to store a collection of elements, such as numbers, characters, or objects, of the same data type under a single variable name.
+
+2.how to create an array
+  In Java, you can create an array by specifying the type of elements it will hold and the size of the array. Java supports both one-dimensional and multi-dimensional arrays
+
+3.can we change the size of an array at run time
+  No
+
+4. can you declare an array without assigning the size of an array
+ Yes
+
+5. what is the default value of array
+  Zero(0)
+
+6. what is a 1D array with an example
+  A one-dimensional (1D) array in Java is a linear data structure that stores a collection of elements of the same data type in a single row. Each element in the array is accessed by an index, which starts from 0 for the first element
+
+class OnedimensionalStandard
+{
+	public static void main(String args[])
+	{    
+	int[] a=new int[3];  
+	a[0]=10; 
+	a[1]=20;  
+	a[2]=30;   
+	System.out.println("One dimensional array elements are");    
+	System.out.println(a[0]);    
+	System.out.println(a[1]);    
+	System.out.println(a[2]);    
+	}
+}
+
+
+
+7.write a program on a 2D array
+
+public class TwoDimensionalArrayExample {
+    public static void main(String[] args) {
+        
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+       
+        System.out.println("2D Array (Matrix):");
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                System.out.print(matrix[row][col] + " ");
+            }
+            System.out.println();
+        }
+
+        
+        int element = matrix[1][2];
+        System.out.println("Element at matrix[1][2]: " + element);
+
+        
+        int sum = 0;
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                sum += matrix[row][col];
+            }
+        }
+        System.out.println("Sum of all elements: " + sum);
+    }
+}
+
