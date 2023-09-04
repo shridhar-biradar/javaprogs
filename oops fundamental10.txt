@@ -1,0 +1,45 @@
+1.How to create an object in java?
+ Using new Keyword
+ Using clone() method
+ Using newInstance() method of the Class class
+ Using newInstance() method of the Constructor class
+ Using Deserialization
+
+2.What is the use of a new keyword in java?
+  It is used to create the object.
+  It allocates the memory at runtime.
+  All objects occupy memory in the heap area.
+  It invokes the object constructor.
+  It requires a single, postfix argument to call the constructor
+  
+
+3.what are the different types of variable in java?
+ local variable
+ instance variable
+ static variable
+
+
+4.what is the difference between instance variable and local variable
+  Instance Variable:
+  They are defined in class but outside the body of methods. 
+  These variables are destroyed when the object is destroyed.  
+  It can be accessed throughout the class. 
+
+   Local Variable :
+  They are defined as a type of variable declared within programming blocks or subroutines. 
+  These variables are destroyed when the constructor or method is exited.
+  Its access is limited to the method in which it is declared. 
+
+
+5.In which area memory is allocated for instance variable and local variable
+ Instance Variables:
+
+Memory Allocation: Instance variables are associated with objects or instances of a class. When you create an object, memory for its instance variables is allocated on the heap memory (also known as the dynamic memory). Each object gets its own set of instance variables, and they are stored in memory for the duration of the object's lifetime.
+Scope: Instance variables are typically accessible throughout the entire scope of an object, meaning they can be accessed and modified as long as the object exists.
+Local Variables:
+
+Memory Allocation: Local variables are declared within a specific block of code, such as a method or function. Memory for local variables is typically allocated on the stack memory (also known as the call stack). The stack is a region of memory that stores function call information, including local variables and return addresses.
+Scope: Local variables are only accessible within the block of code where they are declared. They are temporary and exist only within the scope of the block, such as a function or method. When the block exits, the memory for local variables is automatically reclaimed.
+
+6.what is method overloading
+ Method overloading is a concept in object-oriented programming (OOP) where multiple methods in a class have the same name but differ in the number or type of their parameters.
