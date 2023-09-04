@@ -1,0 +1,61 @@
+1.What is the default value of array for different data types
+Numeric Data Types (int, short, long, byte, float, double): The default value is 0 for numeric types.
+
+char: The default value is '\u0000', which represents the null character.
+
+boolean: The default value is false for boolean types.
+
+Object References: For arrays of objects (e.g., String[], Object[]), the default value is null. This means that initially, all elements in the array will be references to null objects.
+
+2.Can you pass the negative number in array size
+No
+
+3.Where does array stored in jvm memory
+Heap Memory
+
+4.what are the disadvantages of array
+Fixed Size
+Inefficient Insertion and Deletion
+Wasted Memory
+Homogeneous Data
+
+5. what is an anonymous array in java? Give an example
+An array in Java without any name is known as an anonymous array
+
+ex:new int[] { 1, 2, 3, 4};  
+    new char[] {'x', 'y', 'z'}; 
+
+
+6. What are the different ways to traverse an Array in java
+Using For Loop (Traditional Loop)
+Using Enhanced For Loop (Foreach Loop)
+Using While Loop
+Using Arrays.stream()
+
+7. What is the difference between length and length() method give an example
+ length (Array Length):
+
+length is a property used to determine the length (size) of an array.
+It is applicable to arrays, which are fixed-size collections of elements.
+Arrays in Java have a predefined length property that represents the number of elements in the array. 
+
+length() (String Length):
+
+length() is a method used to determine the length (number of characters) of a string.
+It is applicable to instances of the String class.
+length() is a method, so it requires parentheses when called.
+
+public class LengthVsLengthMethodExample {
+    public static void main(String[] args) {
+        
+        int[] numbers = {1, 2, 3, 4, 5};
+        int arrayLength = numbers.length;
+        System.out.println("Array Length: " + arrayLength);
+
+        
+        String text = "Hello, World!";
+        int stringLength = text.length();
+        System.out.println("String Length: " + stringLength);
+    }
+}
+
