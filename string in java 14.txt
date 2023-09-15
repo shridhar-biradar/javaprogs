@@ -1,0 +1,23 @@
+1. What is string in java
+  In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string.
+
+2. types of string in java are?
+ *String Literal
+ *String Object
+
+3.In how many ways can you create string objects in java?
+  In Java, you can create string objects in several ways:
+*Using the new Keyword
+*Using String Concatenation
+*Using StringBuilder or StringBuffer
+*Using String Constructors with Character Arrays
+
+4. what is a string constant pool
+  The String Constant Pool, often referred to simply as the "string pool," is a special area of memory in the Java Virtual Machine (JVM) where the Java runtime environment stores a pool of unique string objects.
+
+5.What do you mean by mutable and immutable objects
+*Mutable objects are objects whose state or value can be modified or changed after they are created. This means that you can alter the object's data or attributes directly.
+*Immutable objects, on the other hand, are objects whose state cannot be changed after they are created. Once an immutable object is constructed, its data or attributes remain fixed and cannot be modified.
+
+6.where exactly is the string constant pool located in the memory
+ Heap

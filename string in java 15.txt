@@ -1,0 +1,134 @@
+1.Write a simple String program to take input from user
+import java.util.*;
+ import java.io.*;
+ public class demo{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter ur name");
+        String s=sc.nextLine();
+        System.out.println("name:" + s);
+    }
+}
+
+2. How do you concatenate two string in java? Give an example
+Two string can be concatenated by using concat method
+
+import java.util.*;
+ import java.io.*;
+ public class demo{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter ur name");
+        String s=sc.nextLine();
+        System.out.println("name:" + s);
+        String st=s.concat(" "+"hello");
+        System.out.println(st);
+    }
+}
+
+3. How do you find the length of a string in java explain with example
+we can find length of a String by using length method
+
+import java.util.*;
+ import java.io.*;
+ public class demo{
+    public static void main(String[] args){
+       String s[]={"Shridhar","hello"};
+       int n=s.length;
+       System.out.println("length:" +n);
+    }
+}
+
+4.How do you comapare two string in java?give an example
+   The most common way to compare strings for equality is to use the equals() method. 
+
+ex:public class StringComparisonExample {
+    public static void main(String[] args) {
+       
+        String str1 = "Hello, World!";
+        String str2 = "Hello, World!";
+        
+        
+        boolean isEqual = str1.equals(str2);
+        System.out.println("Using equals(): " + isEqual); 
+        
+        // Using equalsIgnoreCase() for case-insensitive comparison
+        String str3 = "hello, world!";
+        boolean isIgnoreCaseEqual = str1.equalsIgnoreCase(str3);
+        System.out.println("Using equalsIgnoreCase(): " + isIgnoreCaseEqual); // Should print true
+        
+        // Using compareTo() for lexicographic comparison
+        int compareToResult = str1.compareTo(str2);
+        System.out.println("Using compareTo(): " + compareToResult);
+        // Should print 0 because the strings are equal
+        
+        // Compare strings based on lexicographic order
+        String str4 = "Apple";
+        String str5 = "Banana";
+        int compareLexicographically = str4.compareTo(str5);
+        System.out.println("Comparing 'Apple' and 'Banana': " + compareLexicographically);
+        // Should print a negative value because 'Apple' comes before 'Banana' in lexicographic order
+    }
+}
+
+
+5.write a program to find the length of the string "refrigerator"
+  public class StringLengthExample {
+    public static void main(String[] args) {
+        String str = "refrigerator";
+        
+        // Using the length() method to find the length of the string
+        int length = str.length();
+        
+        // Printing the length of the string
+        System.out.println("The length of the string is: " + length);
+    }
+}
+
+
+
+6.write a program to check if the letter 'e' is present in the word 'Umbrella'
+public class CheckLetterInWord {
+    public static void main(String[] args) {
+        String word = "Umbrella";
+        char letterToCheck = 'e';
+        
+        // Using the contains() method to check if 'e' is present
+        boolean containsE = word.contains(String.valueOf(letterToCheck));
+        
+        if (containsE) {
+            System.out.println("The word '" + word + "' contains the letter 'e'.");
+        } else {
+            System.out.println("The word '" + word + "' does not contain the letter 'e'.");
+        }
+    }
+}
+
+
+7.Write a program to delete all consonants from the string "Hello,have a good day"
+public class RemoveConsonants {
+    public static void main(String[] args) {
+        String input = "Hello, have a good day";
+        
+        // Convert the input string to lowercase for case-insensitive comparison
+        input = input.toLowerCase();
+        
+        // Initialize an empty string to store the result
+        StringBuilder result = new StringBuilder();
+        
+        // Iterate through each character in the input string
+        for (int i = 0; i < input.length(); i++) {
+            char currentChar = input.charAt(i);
+            
+            // Check if the current character is a vowel (a, e, i, o, u) or a space
+            if (currentChar == ' ' || currentChar == 'a' || currentChar == 'e' ||
+                currentChar == 'i' || currentChar == 'o' || currentChar == 'u') {
+                // Append vowels and spaces to the result string
+                result.append(input.charAt(i));
+            }
+        }
+        
+        // Print the result string without consonants
+        System.out.println("Result: " + result.toString());
+    }
+}

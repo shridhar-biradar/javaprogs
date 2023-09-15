@@ -1,0 +1,113 @@
+1. What is mutable String in java Explane with an example
+   In Java, the String class is immutable by default. This means that once a String object is created, its value cannot be changed. Any operation that appears to modify a String actually creates a new String object with the modified value. 
+
+2.Write a program to reverse a string 
+input:"PWSKILLS"
+output:"SLLIKSPW"
+
+public class StringReversal {
+    public static void main(String[] args) {
+        String input = "PWSKILLS";
+        
+        // Call the reverseString function and store the result
+        String reversed = reverseString(input);
+        
+        // Print the reversed string
+        System.out.println("Reversed string: " + reversed);
+    }
+
+    public static String reverseString(String str) {
+        int length = str.length();
+        StringBuilder reversed = new StringBuilder(length);
+
+        // Iterate through the characters of the input string in reverse order
+        for (int i = length - 1; i >= 0; i--) {
+            reversed.append(str.charAt(i)); // Append each character to the result
+        }
+
+        return reversed.toString(); // Convert StringBuilder to a String
+    }
+}
+
+
+3. Write a program to reverse a sentence while preserving the position
+input:Think Twice
+output:"kniht eciwt"
+
+public class ReverseSentenceWords {
+    public static void main(String[] args) {
+        String input = "Think Twice";
+        
+        // Call the reverseSentence function and store the result
+        String reversedSentence = reverseSentence(input);
+        
+        // Print the reversed sentence
+        System.out.println("Reversed sentence: " + reversedSentence);
+    }
+
+    public static String reverseSentence(String sentence) {
+        // Split the sentence into words using space as the delimiter
+        String[] words = sentence.split(" ");
+        
+        // Create a StringBuilder to store the reversed sentence
+        StringBuilder reversed = new StringBuilder();
+        
+        // Iterate through the words in reverse order
+        for (int i = words.length - 1; i >= 0; i--) {
+            String word = words[i];
+            
+            // Reverse each word and append it to the result
+            reversed.append(reverseWord(word));
+            
+            // Add a space unless it's the last word
+            if (i > 0) {
+                reversed.append(" ");
+            }
+        }
+        
+        return reversed.toString();
+    }
+
+    public static String reverseWord(String word) {
+        int length = word.length();
+        StringBuilder reversedWord = new StringBuilder(length);
+
+        // Iterate through the characters of the word in reverse order
+        for (int i = length - 1; i >= 0; i--) {
+            reversedWord.append(word.charAt(i)); // Append each character to the result
+        }
+
+        return reversedWord.toString();
+    }
+}
+
+
+4.Write a program to a sort a string alphabetically
+
+import java.util.Arrays;
+
+public class StringSortAlphabetically {
+    public static void main(String[] args) {
+        String input = "programming";
+
+        // Call the sortString function and store the result
+        String sortedString = sortString(input);
+
+        // Print the sorted string
+        System.out.println("Sorted string: " + sortedString);
+    }
+
+    public static String sortString(String str) {
+        // Convert the string to a character array
+        char[] charArray = str.toCharArray();
+
+        // Sort the character array
+        Arrays.sort(charArray);
+
+        // Construct a new string from the sorted characters
+        String sortedString = new String(charArray);
+
+        return sortedString;
+    }
+}
+
