@@ -1,0 +1,61 @@
+1.Why do we need static keyword in java Explain with example
+  In Java, the static keyword is used to define class-level members, which are associated with the class itself rather than with instances (objects) of the class.
+
+eg:public class Outer {
+    static class Inner {
+        void display() {
+            System.out.println("This is the static inner class.");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Outer.Inner inner = new Outer.Inner();
+        inner.display();
+    }
+}
+
+
+2. What is class loading and how does the java program actually executes
+   Class loading is an essential part of the Java runtime environment and plays a crucial role in how Java programs execute. It refers to the process by which Java classes are loaded into memory during the program's execution. Class loading is one of the key mechanisms that make Java a platform-independent language because it allows classes to be loaded dynamically at runtime.
+
+3. can we mark a local variable as static
+   No
+
+4. Why is the static block executed before the main method in java
+   In Java, the static block (also known as a static initializer) is executed before the main method because of the order in which the Java Virtual Machine (JVM) initializes and runs a Java program. This order ensures that static initialization occurs before the program's entry point, which is the main method, is executed.
+
+5. Why is a static method also called a class method
+   A static method in Java is often referred to as a "class method" because it is associated with the class itself, rather than with instances (objects) of the class. This terminology highlights the fact that static methods are not dependent on any specific instance's state; they operate at the class level and can be called using the class name, just like other class-level members such as static variables.
+
+6. What is the use of static blocks in java
+   Static blocks in Java, often referred to as "static initializers" or "static initialization blocks," are used to initialize static variables or perform one-time initialization tasks for a class. They are executed only once when the class is first loaded into memory by the Java Virtual Machine (JVM). 
+
+7. Difference between Static and Instance variable
+
+*Scope and Lifetime:
+
+Static Variable: A static variable (also known as a class variable) is associated with the class itself, rather than with instances (objects) of the class. It is shared among all instances of the class and has a single value across all instances. Static variables are initialized when the class is loaded into memory and exist for the entire lifetime of the program.
+
+Instance Variable: An instance variable is specific to each instance (object) of the class. Each instance has its own copy of instance variables, and their values can vary from one instance to another. Instance variables are initialized when an object is created (using the new keyword) and exist for as long as the object is in memory.
+
+*Access and Modification:
+
+Static Variable: Static variables can be accessed and modified using the class name (e.g., ClassName.staticVariable). They are shared among all instances, so changing the value of a static variable in one instance affects all other instances and remains consistent across all instances.
+
+Instance Variable: Instance variables are accessed and modified using object references (e.g., objectName.instanceVariable). Each object has its own set of instance variables, so changes to instance variables in one object do not affect the values of instance variables in other objects. Each object maintains its separate state.
+
+8.Difference between Static and non static members
+
+*Association with Class vs. Instances:
+
+Static Members: Static members, including static variables and static methods, are associated with the class itself rather than with instances (objects) of the class. They are shared among all instances of the class and can be accessed using the class name. Static members are created and initialized when the class is loaded into memory.
+
+Non-Static (Instance) Members: Non-static members, including instance variables and instance methods, are associated with individual instances (objects) of the class. Each object has its own set of instance members, and these members are initialized when an object is created using the new keyword. Instance members are used to represent the state and behavior specific to each object.
+
+*Access and Usage:
+
+Static Members: Static members can be accessed and used without creating an instance of the class. They are often used for utility methods, constants, or data that should be shared among all instances of the class. Static methods are called using the class name, and static variables are accessed in a similar manner.
+
+Non-Static (Instance) Members: Non-static members are accessed and used through object references. They represent the state and behavior unique to each object. Instance methods can access and modify instance variables and can use this to refer to the current object. To work with instance members, you need to create an instance of the class.

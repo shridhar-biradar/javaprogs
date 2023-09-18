@@ -1,0 +1,111 @@
+1. What is encapsulation in java? Why is it called data hiding?
+   Encapsulation in Java is one of the four fundamental Object-Oriented Programming (OOP) principles, which include encapsulation, inheritance, polymorphism, and abstraction. It is the practice of bundling data (attributes or fields) and methods (functions or behaviors) that operate on that data into a single unit, known as a class. Encapsulation helps in controlling access to the data by restricting direct access to the class's internal state and providing controlled access through methods.
+
+*Encapsulation involves hiding the internal implementation details of a class and exposing a well-defined interface through methods. This means that the internal state of an object, including its data fields, is not directly accessible from outside the class. Access to the object's data is controlled by the class's methods.
+
+2. What are the important feature of Encapsulation
+*Data Hiding
+*Modularity
+*Access Control
+*Flexibility
+*Security
+*Code reusability
+
+3. What are getter and setters of method in java explain with an example
+   In Java, getter and setter methods are used to access and modify the private fields (instance variables) of a class, following the principles of encapsulation. Getters are methods used to retrieve the value of a private field, and setters are methods used to set or modify the value of a private field. They provide controlled access to the class's internal state while encapsulating the implementation details. 
+eg:
+   public class Student {
+    // Private fields (instance variables)
+    private String name;
+    private int age;
+
+    // Getter method for 'name'
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for 'name'
+    public void setName(String name) {
+        // Optional validation or logic can be added here
+        this.name = name;
+    }
+
+    // Getter method for 'age'
+    public int getAge() {
+        return age;
+    }
+
+    // Setter method for 'age'
+    public void setAge(int age) {
+        // Optional validation or logic can be added here
+        this.age = age;
+    }
+}
+
+
+4. What is the use of this keyword explain with example
+   The this keyword in Java is used to refer to the current instance of a class. It is primarily used within the instance methods and constructors of a class to access or refer to the current object's fields and methods. 
+eg:public class Person {
+    private String name;
+
+    public void setName(String name) {
+        // Use 'this' to refer to the instance variable 'name'
+        this.name = name;
+    }
+}
+
+
+5.What is the advantage of encapsulation
+  The primary advantage of encapsulation is that it provides control over the access to an object's internal state, ensuring data integrity, and hiding implementation details.
+
+6. How to achieve encapsulation in java? Give an example
+
+Encapsulation in Java is achieved by following these steps:
+
+*Declare the instance variables (fields) of a class as private. This makes them accessible only within the class.
+
+*Provide public getter methods to access the values of these private fields.
+
+*Provide public setter methods to modify the values of these private fields, optionally including validation or other logic as needed.
+
+eg:public class Student {
+    // Private instance variables
+    private String name;
+    private int age;
+
+    // Constructor to initialize the object
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter method for 'name'
+    public String getName() {
+        return name;
+    }
+
+    // Setter method for 'name'
+    public void setName(String name) {
+        // Optional validation logic
+        if (name != null && !name.isEmpty()) {
+            this.name = name;
+        }
+    }
+
+    // Getter method for 'age'
+    public int getAge() {
+        return age;
+    }
+
+    // Setter method for 'age'
+    public void setAge(int age) {
+        // Optional validation logic
+        if (age >= 0 && age <= 120) {
+            this.age = age;
+        }
+    }
+
+    // Other methods and behaviors of the Student class
+}
+
+ 

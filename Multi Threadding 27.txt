@@ -1,0 +1,81 @@
+1. What do you mean by Multithreading? Why is it important?
+
+  Multithreading means multiple threads and is considered one of the most important feature of java.the namr suggests, it is the ability of a cpu to execute multiple threads independently at the same time but share the process resources simltanuously.
+
+2. What are the benefits of using Multithreading?
+
+*Allow the program to run continuously even if a part of it is blocked
+*Improve performance as compared to traditional parallel programs that use multiple processes.
+*Allows to write effective programs that utilize maximum cpu time
+*Improves the responiveness of complex application or program
+
+3.What is thread in java
+  Thread are basically the lightweight and smallest unit of processing that can be managed independently by a scheduler.
+
+4.What are two ways of implimenting threads in java
+  There are basically two ways of implimenting thread in java as shown below:
+->Extending the Thread class
+eg:  class MuktiThreadingDemo extends Thread{
+      public void run(){
+	System.out.println("My thread is in running state");
+	}
+	public static void main(String[] args){
+	 MultiThreadingDemo obj=new MultiThreadingDemo();
+	 obj.start();
+	}
+   }
+output: My thraed is in running state
+
+->Implimenting runnable interface in java
+eg:  class MultiThreadingDemo impliments Runnable{
+	 public void run(){
+	 System.out.println("My thread in running state");
+	 }
+	public static void main(String[] args){
+	 MultiThreadingDemo obj=new MultiThreadingDemo();
+         Thread obj=new Thread(obj);
+        tobj.start();
+      }
+}
+output: My Thread is in running state
+
+5. What is the difference between thread and process
+  * Thread: it simply refers to the smallest unit of the particular process .it han the ability to execute different parts of the program at the same time
+ * process: it simply refers to a program that is in execution.A process can be handled using PCB
+
+6. How can we create daemon threads
+   we can create dameon thread in java using thread class class setDaemon(true).it is used to mark the current thread as daemon thread or user thread.isDaemon() method is generally used to check whether the current thread is daemon or not.if thread is daemon it will return true otherwise return false
+
+eg:  program to demonstrate set daemon() and isDaemon() method 
+   public class DaemonThread extends Thread{
+	public DaemonThread(String name){
+ 	  super(name);
+	 }
+public void run(){
+  if(Thread.currentThread().isDaemon()){
+    System.out.println(getName() + "is daemon thread");
+  else
+  {
+    System.out.println(getName() + "is user thread");
+  }
+}
+
+public static void main(String[] args)
+{
+DaemonThread t1=new DaemonThread("t1");
+DaemonThread t2=new DaemonThread("t2");
+DaemonThread t3=new DaemonThread("t3");
+t1.setDaemon(true);
+t1.start();
+t2.start();
+t3.setdaemon(true);
+t3.start();
+}
+}
+
+7. What are the wait() and sleep() methods
+
+*wait(): As the name suggests,it is a non-static method that causes the current thread to wait and go to sleep until some other threads call the notify() or notifyAll() method for the objects monitor.
+sleep(): As the name suggests, it is a static method that pauses or stops the execution of the current thread for some specified period. It doesn’t release the lock while waiting and is mostly used to introduce pause on 
+execution. It is defined in thread class, and no need to call from a synchronized context. 
+	

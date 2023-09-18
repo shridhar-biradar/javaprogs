@@ -1,0 +1,72 @@
+1. program to display current date and time in java
+  import java.time.*;
+public class DateTime{
+public static void main(String[] args){
+LocalDate date=LocalDate.now();
+System.out.println(date);
+LocalTime time=LocalTime.now();
+System.out.println(time);
+}
+}
+
+2.write a program to convert a date to a string in the format MM/dd/yyyy
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+public class DateToString{
+public static void main(String[] args){
+LocalDate date=LocalDate.of(2023,4,4);
+DateTimeFormatter formatter=DateTimeFormatter.ofPattern("MM/dd/yyyy");
+String formattedDate=date.format(formatter);
+System.out.println("formatted date:" + formattedDate);
+}
+}
+
+3.what is the differenc between collection and stream? explain with a example
+
+streams:
+*it doesn't store data,it operates on the source data structure
+*Stream are iterated internally by just mentioning the operation
+
+collection:
+*They don't use functional interfaces
+* collection are iterated externally using loops
+
+ex:
+import java.io.*;
+import java.util.*;
+class main{
+public static void main(String[] args){
+List<String> cl=new ArrayList<>();
+cl.add("google");
+cl.add("apple");
+cl.add("mixrosoft");
+Comparator<String> com=(String o1,String o2)->o1.compareTo(o2);
+Collection.sort(cl,com);
+for(String name:cl){
+System.out.println(name);
+}
+}
+}
+
+4.what os enums in java? explain an example
+ we can use enum to define a group of named constant
+
+ex:
+class EnumDemo{
+public enum DayOfWeek{
+monday,tuesday,wednesday,thursday,friday,saturday,sunday}
+public static void main(String[] args){
+for(DayOfWeek.values());
+System.out.println(d);
+}
+}
+
+5. What are built in annotation in java
+@override
+@depricated
+@SuppessWarnings
+@FunctionalInterface
+
+
+4.
